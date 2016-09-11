@@ -68,7 +68,7 @@ RETURNS
                     {
                         string sbuf = "";
                         // There may be more than one digits in number. There also may be decimal numbers and fractions
-                        while (i < tokens.Length && tokens[i] >= '.' && tokens[i] <= '9')
+                        while (i < tokens.Length && tokens[i] >= '-' && tokens[i] <= '9')
                             sbuf += (tokens[i++]);
                         if (sbuf.Contains("/")) // If there is a fraction first solve the fraction!
                         {
@@ -105,7 +105,7 @@ RETURNS
                         // Must set sbuf equal to "-" to deal with unary minus.
                         i++;
                         // There may be more than one digits in number. There also may be decimal numbers and fractions
-                        while (i < tokens.Length && tokens[i] >= '.' && tokens[i] <= '9')
+                        while (i < tokens.Length && tokens[i] >= '-' && tokens[i] <= '9')
                             sbuf += (tokens[i++]);
                         if (sbuf.Contains("/")) // If there is a fraction first solve the fraction!
                         {
